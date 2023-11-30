@@ -22,7 +22,7 @@ public class login extends HttpServlet {
         if(user.equals("1")&&pass.equals("1")){
             HttpSession session=req.getSession();
             session.setAttribute("user","hihihi");
-            RequestDispatcher dispatcher=session.getServletContext().getRequestDispatcher("result.jsp");
+            resp.sendRedirect("result.jsp");
 
         }else{
             System.out.println("khong duoc");
